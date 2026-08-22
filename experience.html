@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Muhammad Ikhwan Ariff</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
+            <div class="flex flex-col">
+                <span class="text-2xl font-bold text-black">Muhammad Ikhwan Ariff</span>
+                <span class="text-xs uppercase text-gray-600 font-semibold tracking-wide">Full-Stack Engineer</span>
+            </div>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="text-gray-600 hover:text-black transition">Home</a>
+                <a href="experience.html" class="text-black font-semibold">Experience</a>
+                <a href="projects.html" class="text-gray-600 hover:text-black transition">Projects</a>
+                <a href="skills.html" class="text-gray-600 hover:text-black transition">Skills</a>
+                <a href="resume.html" class="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition font-semibold">Resume</a>
+            </nav>
+            <button id="menu-btn" class="lg:hidden">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed top-20 w-full bg-white shadow-lg z-40 lg:hidden">
+        <div class="flex flex-col p-6 gap-4">
+            <a href="index.html" class="text-gray-600">Home</a>
+            <a href="experience.html" class="text-black font-semibold">Experience</a>
+            <a href="projects.html" class="text-gray-600">Projects</a>
+            <a href="skills.html" class="text-gray-600">Skills</a>
+            <a href="resume.html" class="bg-black text-white px-6 py-2 rounded-lg text-center font-semibold">Resume</a>
+        </div>
+    </div>
+
+    <main class="pt-32 pb-20">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <!-- Header -->
+            <div class="mb-16">
+                <h1 class="text-5xl lg:text-6xl font-bold text-black mb-4">Professional Experience</h1>
+                <p class="text-xl text-gray-600 max-w-3xl">A timeline of architectural decisions, systems engineering, and delivering value through code.</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="space-y-12">
+                <!-- Experience 1: Freelance/Entrepreneurial -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <div class="lg:text-right">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-full mb-4 lg:justify-end w-full lg:w-auto">
+                            <span class="material-symbols-outlined text-lg">rocket_launch</span>
+                            <span class="font-semibold">Freelance / Entrepreneurial</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-black mb-2">Lead Developer</h3>
+                        <p class="text-2xl text-gray-700 mb-2">defeXsnap</p>
+                        <p class="text-lg text-gray-500 font-semibold">Present</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Architected and deployed <strong>defeXsnap</strong>, a specialized web-based inspection reporting tool designed to solve complex field-data collection bottlenecks. Currently serving 2+ major commercial companies with a 40% improvement in reporting efficiency.
+                        </p>
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-green-600 mt-1">check_circle</span>
+                                <span class="text-gray-700">Successful deployment across multiple commercial entities</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-green-600 mt-1">trending_up</span>
+                                <span class="text-gray-700">40% improvement in reporting efficiency for clients</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-green-600 mt-1">groups</span>
+                                <span class="text-gray-700">Built and managed client relationships</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white text-gray-700 font-medium rounded-md border border-gray-200 text-sm">Web Architecture</span>
+                            <span class="px-3 py-1 bg-white text-gray-700 font-medium rounded-md border border-gray-200 text-sm">Full Stack</span>
+                            <span class="px-3 py-1 bg-white text-gray-700 font-medium rounded-md border border-gray-200 text-sm">Product Strategy</span>
+                            <span class="px-3 py-1 bg-white text-gray-700 font-medium rounded-md border border-gray-200 text-sm">Entrepreneurship</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2: Corporate Internship -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start lg:mt-16">
+                    <div class="bg-gray-50 rounded-xl p-8 border border-gray-200 lg:order-2">
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Gained foundational corporate engineering experience within a structured, high-compliance environment. Focused on backend systems development, robust database management, and enterprise application architecture at a major government-linked company.
+                        </p>
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-center gap-4 p-4 bg-white rounded-lg border border-gray-200">
+                                <div class="flex flex-col">
+                                    <span class="font-bold text-black">Laravel Framework</span>
+                                    <span class="text-sm text-gray-600">Core backend development</span>
+                                </div>
+                                <span class="material-symbols-outlined text-2xl text-gray-700 ml-auto">code_blocks</span>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 bg-white rounded-lg border border-gray-200">
+                                <div class="flex flex-col">
+                                    <span class="font-bold text-black">Database Optimization</span>
+                                    <span class="text-sm text-gray-600">Query performance & structure</span>
+                                </div>
+                                <span class="material-symbols-outlined text-2xl text-gray-700 ml-auto">database</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white text-gray-700 font-medium rounded-md border border-gray-200 text-sm">PHP</span>
+                            <span class="px-3 py-1 bg-white text-gray-700 font-medium rounded-md border border-gray-200 text-sm">MySQL</span>
+                            <span class="px-3 py-1 bg-white text-gray-700 font-medium rounded-md border border-gray-200 text-sm">Enterprise Systems</span>
+                        </div>
+                    </div>
+                    <div class="lg:text-right lg:order-1">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-full mb-4 lg:justify-end w-full lg:w-auto">
+                            <span class="material-symbols-outlined text-lg">corporate_fare</span>
+                            <span class="font-semibold">Corporate Internship</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-black mb-2">IT Intern</h3>
+                        <p class="text-2xl text-gray-700 mb-2">LPPSA</p>
+                        <p class="text-lg text-gray-500 font-semibold">(Lembaga Pembiayaan Perumahan Sektor Awam)</p>
+                        <p class="text-lg text-gray-500 font-semibold mt-4">Past (2024)</p>
+                    </div>
+                </div>
+
+                <!-- Experience 3: Events & Promotions -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start lg:mt-16">
+                    <div class="lg:text-right">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-full mb-4 lg:justify-end w-full lg:w-auto">
+                            <span class="material-symbols-outlined text-lg">event</span>
+                            <span class="font-semibold">Event & Marketing</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-black mb-2">Event Crew & Promoter</h3>
+                        <p class="text-2xl text-gray-700 mb-2">Genting Skyworld & Putrajaya</p>
+                        <p class="text-lg text-gray-500 font-semibold">Jan - Sep 2023</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            Developed strong interpersonal and organizational skills through event management and promotional activities. Demonstrated effective crowd management, problem-solving, and communication abilities in dynamic environments.
+                        </p>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-blue-600 mt-1">check_circle</span>
+                                <span class="text-gray-700">Event area preparation and logistical coordination</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-blue-600 mt-1">check_circle</span>
+                                <span class="text-gray-700">Crowd management and customer assistance</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-blue-600 mt-1">check_circle</span>
+                                <span class="text-gray-700">Product promotion and brand awareness activities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Muhammad Ikhwan Ariff</h3>
+                    <p class="text-gray-400">Full-Stack Developer & IT Specialist</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p><a href="index.html" class="hover:text-white transition">Home</a></p>
+                        <p><a href="experience.html" class="hover:text-white transition">Experience</a></p>
+                        <p><a href="projects.html" class="hover:text-white transition">Projects</a></p>
+                        <p><a href="skills.html" class="hover:text-white transition">Skills</a></p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p><a href="mailto:ikhwanariff255@gmail.com" class="hover:text-white transition">Email</a></p>
+                        <p><a href="tel:+60182575321" class="hover:text-white transition">+60 182 575 321</a></p>
+                        <p><a href="#" class="hover:text-white transition">LinkedIn</a></p>
+                        <p><a href="#" class="hover:text-white transition">GitHub</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-center text-gray-400">© 2024 Muhammad Ikhwan Ariff. Crafted with precision & intent.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
