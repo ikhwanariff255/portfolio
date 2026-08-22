@@ -8,6 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/>
     <style>
+        :root {
+            --primary: #000000;
+            --surface: #ffffff;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--surface);
+            color: #1a1c1c;
+            overflow-x: hidden;
+        }
         @keyframes fillBar {
             from {
                 width: 0%;
@@ -23,34 +33,36 @@
     </style>
 </head>
 <body class="bg-white">
-    <!-- Navigation -->
-    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
-            <div class="flex flex-col">
-                <span class="text-2xl font-bold text-black">Muhammad Ikhwan Ariff</span>
-                <span class="text-xs uppercase text-gray-600 font-semibold tracking-wide">Full-Stack Engineer</span>
+    <!-- Navigation (Konsisten sebiji seperti halaman lain) -->
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-5 lg:px-8 flex items-center justify-between h-20">
+            <div class="flex flex-col z-50">
+                <span class="text-xl sm:text-2xl font-bold text-black leading-tight">Muhammad Ikhwan</span>
+                <span class="text-[10px] sm:text-xs uppercase text-gray-500 font-bold tracking-wider">Full-Stack Engineer</span>
             </div>
+            
             <nav class="hidden lg:flex items-center gap-8">
                 <a href="index.html" class="text-gray-600 hover:text-black transition">Home</a>
                 <a href="experience.html" class="text-gray-600 hover:text-black transition">Experience</a>
                 <a href="projects.html" class="text-gray-600 hover:text-black transition">Projects</a>
                 <a href="skills.html" class="text-black font-semibold">Skills</a>
-                <a href="resume.html" class="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition font-semibold">Resume</a>
+                <a href="resume.html" class="bg-black text-white px-6 py-2.5 rounded-lg hover:bg-gray-800 transition font-semibold text-sm">Resume</a>
             </nav>
-            <button id="menu-btn" class="lg:hidden">
-                <span class="material-symbols-outlined">menu</span>
+
+            <button id="menu-btn" class="lg:hidden z-50 p-2 -mr-2 text-black focus:outline-none">
+                <span class="material-symbols-outlined text-3xl transition-transform duration-300" id="menu-icon">menu</span>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden fixed top-20 w-full bg-white shadow-lg z-40 lg:hidden">
-        <div class="flex flex-col p-6 gap-4">
-            <a href="index.html" class="text-gray-600">Home</a>
-            <a href="experience.html" class="text-gray-600">Experience</a>
-            <a href="projects.html" class="text-gray-600">Projects</a>
-            <a href="skills.html" class="text-black font-semibold">Skills</a>
-            <a href="resume.html" class="bg-black text-white px-6 py-2 rounded-lg text-center font-semibold">Resume</a>
+    <!-- Mobile Menu Overlay (Konsisten) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden pt-24">
+        <div class="flex flex-col px-6 gap-6 text-xl">
+            <a href="index.html" class="text-gray-600 font-medium border-b border-gray-100 pb-4">Home</a>
+            <a href="experience.html" class="text-gray-600 font-medium border-b border-gray-100 pb-4">Experience</a>
+            <a href="projects.html" class="text-gray-600 font-medium border-b border-gray-100 pb-4">Projects</a>
+            <a href="skills.html" class="text-black font-bold border-b border-gray-100 pb-4">Skills</a>
+            <a href="resume.html" class="bg-black text-white px-6 py-4 rounded-xl text-center font-bold mt-4">Download Resume</a>
         </div>
     </div>
 
@@ -289,20 +301,6 @@
                             <span class="text-gray-600 text-sm">Professional</span>
                         </div>
                     </div>
-                    
-                    <!-- <div class="p-6 bg-blue-50 border-2 border-blue-200 rounded-xl">
-                        <h4 class="font-bold text-black text-lg mb-2">Arabic</h4>
-                        <div class="flex items-center gap-2">
-                            <div class="flex gap-1">
-                                <span class="material-symbols-outlined text-blue-600">star</span>
-                                <span class="material-symbols-outlined text-blue-600">star</span>
-                                <span class="material-symbols-outlined text-blue-600">star</span>
-                                <span class="material-symbols-outlined text-gray-300">star</span>
-                                <span class="material-symbols-outlined text-gray-300">star</span>
-                            </div>
-                            <span class="text-gray-600 text-sm">Intermediate</span>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -341,18 +339,24 @@
         </div>
     </footer>
 
+    <!-- Skrip Mobile Menu Konsisten -->
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        let isMenuOpen = false;
 
         menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+            isMenuOpen = !isMenuOpen;
+            if(isMenuOpen) {
+                mobileMenu.classList.remove('translate-x-full');
+                menuIcon.textContent = 'close';
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+                menuIcon.textContent = 'menu';
+                document.body.style.overflow = '';
+            }
         });
     </script>
 </body>
