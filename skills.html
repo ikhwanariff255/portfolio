@@ -3,44 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills | Muhammad Ikhwan Ariff</title>
+    <title>Skills | Muhammad Ikhwan Ariff, Full-Stack Web Developer</title>
+    <meta name="description" content="Skills of Muhammad Ikhwan Ariff: PHP, Laravel, JavaScript, Java, MySQL, Oracle, Linux VPS, Nginx, AWS EC2, ESP32 and MQTT.">
+    <link rel="canonical" href="https://ikhwanariff.site/skills">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Muhammad Ikhwan Ariff">
+    <meta property="og:title" content="Skills | Muhammad Ikhwan Ariff, Full-Stack Web Developer">
+    <meta property="og:description" content="PHP, Laravel, JavaScript, Java, MySQL, Oracle, Linux VPS, Nginx, AWS EC2, ESP32 and MQTT.">
+    <meta property="og:url" content="https://ikhwanariff.site/skills">
+    <meta property="og:image" content="https://ikhwanariff.site/gambar-ikhwan.jpg">
+    <meta name="twitter:card" content="summary">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/>
-    <style>
-        :root {
-            --primary: #000000;
-            --surface: #ffffff;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--surface);
-            color: #1a1c1c;
-            overflow-x: hidden;
-        }
-        @keyframes fillBar {
-            from {
-                width: 0%;
-            }
-            to {
-                width: var(--width);
-            }
-        }
-        
-        .skill-bar {
-            animation: fillBar 1s ease-out forwards;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <link href="assets/site.css" rel="stylesheet"/>
 </head>
-<body class="bg-white">
-    <!-- Navigation (Konsisten sebiji seperti halaman lain) -->
+<body>
+    <!-- Navigation -->
     <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-5 lg:px-8 flex items-center justify-between h-20">
-            <div class="flex flex-col z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-5 lg:px-8 flex items-center justify-between h-20">
+            <a href="index.html" class="flex flex-col z-50">
                 <span class="text-xl sm:text-2xl font-bold text-black leading-tight">Muhammad Ikhwan</span>
-                <span class="text-[10px] sm:text-xs uppercase text-gray-500 font-bold tracking-wider">Full-Stack Engineer</span>
-            </div>
-            
+                <span class="text-[10px] sm:text-xs uppercase text-gray-500 font-bold tracking-wider">Full-Stack Web Developer</span>
+            </a>
+
             <nav class="hidden lg:flex items-center gap-8">
                 <a href="index.html" class="text-gray-600 hover:text-black transition">Home</a>
                 <a href="experience.html" class="text-gray-600 hover:text-black transition">Experience</a>
@@ -49,315 +35,177 @@
                 <a href="resume.html" class="bg-black text-white px-6 py-2.5 rounded-lg hover:bg-gray-800 transition font-semibold text-sm">Resume</a>
             </nav>
 
-            <button id="menu-btn" class="lg:hidden z-50 p-2 -mr-2 text-black focus:outline-none">
-                <span class="material-symbols-outlined text-3xl transition-transform duration-300" id="menu-icon">menu</span>
+            <button id="menu-btn" class="lg:hidden z-50 p-2 -mr-2 text-black focus:outline-none" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay (Konsisten) -->
-    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden pt-24">
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full invisible transition-[transform,visibility] duration-300 ease-in-out lg:hidden pt-24">
         <div class="flex flex-col px-6 gap-6 text-xl">
             <a href="index.html" class="text-gray-600 font-medium border-b border-gray-100 pb-4">Home</a>
             <a href="experience.html" class="text-gray-600 font-medium border-b border-gray-100 pb-4">Experience</a>
             <a href="projects.html" class="text-gray-600 font-medium border-b border-gray-100 pb-4">Projects</a>
             <a href="skills.html" class="text-black font-bold border-b border-gray-100 pb-4">Skills</a>
-            <a href="resume.html" class="bg-black text-white px-6 py-4 rounded-xl text-center font-bold mt-4">Download Resume</a>
+            <a href="resume.html" class="bg-black text-white px-6 py-4 rounded-xl text-center font-bold mt-4">Resume</a>
         </div>
     </div>
 
     <main class="pt-32 pb-20">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            <!-- Header -->
-            <div class="mb-20">
-                <h1 class="text-5xl lg:text-6xl font-bold text-black mb-4">Technical Competencies</h1>
-                <p class="text-xl text-gray-600 max-w-3xl">A comprehensive overview of specialized skills and core technologies acquired through professional experience and academic foundation.</p>
+        <div class="max-w-6xl mx-auto px-4 sm:px-5 lg:px-8">
+            <div class="mb-12 lg:mb-16">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4">Skills</h1>
+                <p class="text-lg text-gray-600 max-w-3xl">Languages, frameworks and infrastructure I've used in work and projects.</p>
             </div>
 
-            <!-- Skills Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-                <!-- Backend Development -->
-                <div class="bg-gray-50 rounded-xl p-8 border border-gray-200 hover:shadow-lg transition">
-                    <div class="flex items-center gap-3 mb-8 pb-4 border-b border-gray-300">
-                        <div class="w-12 h-12 rounded-lg bg-black text-white flex items-center justify-center">
-                            <span class="material-symbols-outlined">dns</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-black">Backend Development</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16">
+                <section class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-11 h-11 rounded-lg bg-black text-white flex items-center justify-center"><span class="material-symbols-outlined">code</span></div>
+                        <h2 class="text-xl font-bold text-black">Languages</h2>
                     </div>
-                    
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold text-black text-sm">Laravel</span>
-                                <span class="text-black font-bold">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-300 h-2 rounded-full overflow-hidden">
-                                <div class="skill-bar bg-black h-full rounded-full" style="--width: 90%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold text-black text-sm">PHP</span>
-                                <span class="text-black font-bold">85%</span>
-                            </div>
-                            <div class="w-full bg-gray-300 h-2 rounded-full overflow-hidden">
-                                <div class="skill-bar bg-black h-full rounded-full" style="--width: 85%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold text-black text-sm">MySQL</span>
-                                <span class="text-black font-bold">80%</span>
-                            </div>
-                            <div class="w-full bg-gray-300 h-2 rounded-full overflow-hidden">
-                                <div class="skill-bar bg-black h-full rounded-full" style="--width: 80%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold text-black text-sm">RESTful APIs</span>
-                                <span class="text-black font-bold">85%</span>
-                            </div>
-                            <div class="w-full bg-gray-300 h-2 rounded-full overflow-hidden">
-                                <div class="skill-bar bg-black h-full rounded-full" style="--width: 85%"></div>
-                            </div>
-                        </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip">PHP</span>
+                        <span class="chip">JavaScript</span>
+                        <span class="chip">Java</span>
+                        <span class="chip">C++</span>
+                        <span class="chip">SQL</span>
+                        <span class="chip">HTML</span>
+                        <span class="chip">CSS</span>
                     </div>
-                </div>
+                </section>
 
-                <!-- Software Engineering -->
-                <div class="bg-gray-50 rounded-xl p-8 border border-gray-200 hover:shadow-lg transition">
-                    <div class="flex items-center gap-3 mb-8 pb-4 border-b border-gray-300">
-                        <div class="w-12 h-12 rounded-lg bg-blue-600 text-white flex items-center justify-center">
-                            <span class="material-symbols-outlined">code_blocks</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-black">Software Engineering</h3>
+                <section class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-11 h-11 rounded-lg bg-black text-white flex items-center justify-center"><span class="material-symbols-outlined">build</span></div>
+                        <h2 class="text-xl font-bold text-black">Frameworks &amp; Tools</h2>
                     </div>
-                    
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold text-black text-sm">Java</span>
-                                <span class="text-black font-bold">75%</span>
-                            </div>
-                            <div class="w-full bg-gray-300 h-2 rounded-full overflow-hidden">
-                                <div class="skill-bar bg-blue-600 h-full rounded-full" style="--width: 75%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold text-black text-sm">C++</span>
-                                <span class="text-black font-bold">70%</span>
-                            </div>
-                            <div class="w-full bg-gray-300 h-2 rounded-full overflow-hidden">
-                                <div class="skill-bar bg-blue-600 h-full rounded-full" style="--width: 70%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold text-black text-sm">HTML/CSS/JavaScript</span>
-                                <span class="text-black font-bold">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-300 h-2 rounded-full overflow-hidden">
-                                <div class="skill-bar bg-blue-600 h-full rounded-full" style="--width: 90%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold text-black text-sm">OOP Principles</span>
-                                <span class="text-black font-bold">85%</span>
-                            </div>
-                            <div class="w-full bg-gray-300 h-2 rounded-full overflow-hidden">
-                                <div class="skill-bar bg-blue-600 h-full rounded-full" style="--width: 85%"></div>
-                            </div>
-                        </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip">Laravel</span>
+                        <span class="chip">Filament v3</span>
+                        <span class="chip">Livewire</span>
+                        <span class="chip">Alpine.js</span>
+                        <span class="chip">Tailwind CSS</span>
+                        <span class="chip">Java Servlets</span>
+                        <span class="chip">JSP</span>
+                        <span class="chip">JDBC</span>
+                        <span class="chip">Git</span>
                     </div>
-                </div>
+                </section>
 
-                <!-- Hardware & IoT -->
-                <div class="bg-gray-50 rounded-xl p-8 border border-gray-200 hover:shadow-lg transition">
-                    <div class="flex items-center gap-3 mb-8 pb-4 border-b border-gray-300">
-                        <div class="w-12 h-12 rounded-lg bg-green-600 text-white flex items-center justify-center">
-                            <span class="material-symbols-outlined">router</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-black">Hardware & IoT</h3>
+                <section class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-11 h-11 rounded-lg bg-black text-white flex items-center justify-center"><span class="material-symbols-outlined">dns</span></div>
+                        <h2 class="text-xl font-bold text-black">Database &amp; Infrastructure</h2>
                     </div>
-                    
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold text-black text-sm">ESP32/Arduino</span>
-                                <span class="text-black font-bold">80%</span>
-                            </div>
-                            <div class="w-full bg-gray-300 h-2 rounded-full overflow-hidden">
-                                <div class="skill-bar bg-green-600 h-full rounded-full" style="--width: 80%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold text-black text-sm">IoT Integration</span>
-                                <span class="text-black font-bold">80%</span>
-                            </div>
-                            <div class="w-full bg-gray-300 h-2 rounded-full overflow-hidden">
-                                <div class="skill-bar bg-green-600 h-full rounded-full" style="--width: 80%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold text-black text-sm">Sensor Integration</span>
-                                <span class="text-black font-bold">75%</span>
-                            </div>
-                            <div class="w-full bg-gray-300 h-2 rounded-full overflow-hidden">
-                                <div class="skill-bar bg-green-600 h-full rounded-full" style="--width: 75%"></div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="font-semibold text-black text-sm">Python (Embedded)</span>
-                                <span class="text-black font-bold">75%</span>
-                            </div>
-                            <div class="w-full bg-gray-300 h-2 rounded-full overflow-hidden">
-                                <div class="skill-bar bg-green-600 h-full rounded-full" style="--width: 75%"></div>
-                            </div>
-                        </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip">MySQL</span>
+                        <span class="chip">Oracle Database</span>
+                        <span class="chip">Linux VPS administration</span>
+                        <span class="chip">Nginx</span>
+                        <span class="chip">SSL/TLS (Certbot)</span>
+                        <span class="chip">AWS EC2</span>
                     </div>
-                </div>
+                </section>
+
+                <section class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-11 h-11 rounded-lg bg-black text-white flex items-center justify-center"><span class="material-symbols-outlined">router</span></div>
+                        <h2 class="text-xl font-bold text-black">IoT</h2>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip">ESP32 firmware</span>
+                        <span class="chip">MQTT</span>
+                        <span class="chip">Flask</span>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-11 h-11 rounded-lg bg-black text-white flex items-center justify-center"><span class="material-symbols-outlined">checklist</span></div>
+                        <h2 class="text-xl font-bold text-black">Practices</h2>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip">MVC</span>
+                        <span class="chip">DAO pattern</span>
+                        <span class="chip">OOP</span>
+                        <span class="chip">UAT</span>
+                        <span class="chip">Data Structures</span>
+                    </div>
+                </section>
             </div>
 
-            <!-- Methodologies & Tools -->
-            <div class="mb-20">
-                <h2 class="text-3xl font-bold text-black mb-8">Methodologies & Tools</h2>
-                <div class="flex flex-wrap gap-4">
-                    <div class="px-6 py-3 bg-gray-100 text-black rounded-lg font-semibold border border-gray-300 hover:bg-gray-200 transition cursor-default">
-                        Git & Version Control
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+                <section>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-black mb-6">Certifications</h2>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-xl border border-gray-200 p-5">
+                            <h3 class="font-bold text-black">Career Essentials in Software Development</h3>
+                            <p class="text-sm text-gray-600">Microsoft &amp; LinkedIn · Oct 2026</p>
+                        </div>
+                        <div class="bg-white rounded-xl border border-gray-200 p-5">
+                            <h3 class="font-bold text-black">Career Essentials in Generative AI</h3>
+                            <p class="text-sm text-gray-600">Microsoft &amp; LinkedIn · Oct 2026</p>
+                        </div>
                     </div>
-                    <div class="px-6 py-3 bg-gray-100 text-black rounded-lg font-semibold border border-gray-300 hover:bg-gray-200 transition cursor-default">
-                        Agile / Scrum
-                    </div>
-                    <div class="px-6 py-3 bg-gray-100 text-black rounded-lg font-semibold border border-gray-300 hover:bg-gray-200 transition cursor-default">
-                        System Architecture
-                    </div>
-                    <div class="px-6 py-3 bg-gray-100 text-black rounded-lg font-semibold border border-gray-300 hover:bg-gray-200 transition cursor-default">
-                        Database Optimization
-                    </div>
-                    <div class="px-6 py-3 bg-gray-100 text-black rounded-lg font-semibold border border-gray-300 hover:bg-gray-200 transition cursor-default">
-                        Responsive Web Design
-                    </div>
-                    <div class="px-6 py-3 bg-gray-100 text-black rounded-lg font-semibold border border-gray-300 hover:bg-gray-200 transition cursor-default">
-                        Real-time Analytics
-                    </div>
-                    <div class="px-6 py-3 bg-gray-100 text-black rounded-lg font-semibold border border-gray-300 hover:bg-gray-200 transition cursor-default">
-                        API Development
-                    </div>
-                    <div class="px-6 py-3 bg-gray-100 text-black rounded-lg font-semibold border border-gray-300 hover:bg-gray-200 transition cursor-default">
-                        Cloud Deployment
-                    </div>
-                    <div class="px-6 py-3 bg-gray-100 text-black rounded-lg font-semibold border border-gray-300 hover:bg-gray-200 transition cursor-default">
-                        Machine Learning Basics
-                    </div>
-                    <div class="px-6 py-3 bg-gray-100 text-black rounded-lg font-semibold border border-gray-300 hover:bg-gray-200 transition cursor-default">
-                        Problem Solving
-                    </div>
-                </div>
-            </div>
+                </section>
 
-            <!-- Languages -->
-            <div>
-                <h2 class="text-3xl font-bold text-black mb-8">Languages</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="p-6 bg-blue-50 border-2 border-blue-200 rounded-xl">
-                        <h4 class="font-bold text-black text-lg mb-2">Bahasa Malaysia</h4>
-                        <div class="flex items-center gap-2">
-                            <div class="flex gap-1">
-                                <span class="material-symbols-outlined text-blue-600">star</span>
-                                <span class="material-symbols-outlined text-blue-600">star</span>
-                                <span class="material-symbols-outlined text-blue-600">star</span>
-                                <span class="material-symbols-outlined text-blue-600">star</span>
-                                <span class="material-symbols-outlined text-blue-600">star</span>
-                            </div>
-                            <span class="text-gray-600 text-sm">Native / Fluent</span>
+                <section>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-black mb-6">Spoken languages</h2>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-xl border border-gray-200 p-5 flex justify-between gap-4">
+                            <h3 class="font-bold text-black">Bahasa Malaysia</h3>
+                            <p class="text-sm text-gray-600">Native</p>
+                        </div>
+                        <div class="bg-white rounded-xl border border-gray-200 p-5 flex justify-between gap-4">
+                            <h3 class="font-bold text-black">English</h3>
+                            <p class="text-sm text-gray-600">Professional</p>
+                        </div>
+                        <div class="bg-white rounded-xl border border-gray-200 p-5 flex justify-between gap-4">
+                            <h3 class="font-bold text-black">Arabic</h3>
+                            <p class="text-sm text-gray-600">Intermediate</p>
                         </div>
                     </div>
-                    
-                    <div class="p-6 bg-blue-50 border-2 border-blue-200 rounded-xl">
-                        <h4 class="font-bold text-black text-lg mb-2">English</h4>
-                        <div class="flex items-center gap-2">
-                            <div class="flex gap-1">
-                                <span class="material-symbols-outlined text-blue-600">star</span>
-                                <span class="material-symbols-outlined text-blue-600">star</span>
-                                <span class="material-symbols-outlined text-blue-600">star</span>
-                                <span class="material-symbols-outlined text-blue-600">star</span>
-                                <span class="material-symbols-outlined text-gray-300">star</span>
-                            </div>
-                            <span class="text-gray-600 text-sm">Professional</span>
-                        </div>
-                    </div>
-                </div>
+                </section>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800 mt-20">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+    <footer class="bg-gray-950 text-white py-12 lg:py-16 border-t border-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-5 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 mb-12">
                 <div>
-                    <h3 class="font-bold text-lg mb-4">Muhammad Ikhwan Ariff</h3>
-                    <p class="text-gray-400">Full-Stack Developer & IT Specialist</p>
+                    <h3 class="font-bold text-xl mb-2">Muhammad Ikhwan Ariff</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Full-Stack Web Developer · Kajang, Selangor, Malaysia</p>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Navigation</h4>
-                    <div class="space-y-2 text-gray-400">
+                    <h4 class="font-bold text-gray-100 mb-4 uppercase tracking-wider text-sm">Navigation</h4>
+                    <div class="space-y-3 text-gray-400 text-sm font-medium">
                         <p><a href="index.html" class="hover:text-white transition">Home</a></p>
                         <p><a href="experience.html" class="hover:text-white transition">Experience</a></p>
                         <p><a href="projects.html" class="hover:text-white transition">Projects</a></p>
                         <p><a href="skills.html" class="hover:text-white transition">Skills</a></p>
+                        <p><a href="resume.html" class="hover:text-white transition">Resume</a></p>
                     </div>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Connect</h4>
-                    <div class="space-y-2 text-gray-400">
-                        <p><a href="mailto:ikhwanariff255@gmail.com" class="hover:text-white transition">Email</a></p>
-                        <p><a href="tel:+60182575321" class="hover:text-white transition">+60 182 575 321</a></p>
-                        <p><a href="#" class="hover:text-white transition">LinkedIn</a></p>
-                        <p><a href="#" class="hover:text-white transition">GitHub</a></p>
+                    <h4 class="font-bold text-gray-100 mb-4 uppercase tracking-wider text-sm">Connect</h4>
+                    <div class="space-y-3 text-gray-400 text-sm font-medium">
+                        <p><a href="mailto:ikhwanariff255@gmail.com" class="hover:text-white transition flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">mail</span> ikhwanariff255@gmail.com</a></p>
+                        <p><a href="tel:+60182575321" class="hover:text-white transition flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">call</span> +60 18-257 5321</a></p>
+                        <p><a href="https://www.linkedin.com/in/ikhwan-ariff-31864a323" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">link</span> LinkedIn</a></p>
+                        <p><a href="https://github.com/ikhwanariff255" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">code</span> GitHub</a></p>
                     </div>
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8">
-                <p class="text-center text-gray-400">© 2024 Muhammad Ikhwan Ariff. Crafted with precision & intent.</p>
+                <p class="text-center md:text-left text-gray-500 text-sm">© <span data-year>2026</span> Muhammad Ikhwan Ariff</p>
             </div>
         </div>
     </footer>
 
-    <!-- Skrip Mobile Menu Konsisten -->
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        let isMenuOpen = false;
-
-        menuBtn.addEventListener('click', () => {
-            isMenuOpen = !isMenuOpen;
-            if(isMenuOpen) {
-                mobileMenu.classList.remove('translate-x-full');
-                menuIcon.textContent = 'close';
-                document.body.style.overflow = 'hidden';
-            } else {
-                mobileMenu.classList.add('translate-x-full');
-                menuIcon.textContent = 'menu';
-                document.body.style.overflow = '';
-            }
-        });
-    </script>
+    <script src="assets/site.js"></script>
 </body>
 </html>

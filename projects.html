@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Muhammad Ikhwan Ariff</title>
+    <title>Projects | Muhammad Ikhwan Ariff, Full-Stack Web Developer</title>
+    <meta name="description" content="Projects by Muhammad Ikhwan Ariff: DefexSnap inspection platform, a smart tilapia aquaculture monitoring platform using IoT and AI, and a Java EE e-commerce platform.">
+    <link rel="canonical" href="https://ikhwanariff.site/projects">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Muhammad Ikhwan Ariff">
+    <meta property="og:title" content="Projects | Muhammad Ikhwan Ariff, Full-Stack Web Developer">
+    <meta property="og:description" content="DefexSnap inspection platform (8–12 to 30+ reports a month), tilapia aquaculture monitoring with IoT and AI, Java EE e-commerce.">
+    <meta property="og:url" content="https://ikhwanariff.site/projects">
+    <meta property="og:image" content="https://ikhwanariff.site/gambar-ikhwan.jpg">
+    <meta name="twitter:card" content="summary">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/>
-    <style>
-        :root {
-            --primary: #000000;
-            --surface: #ffffff;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--surface);
-            color: #1a1c1c;
-            overflow-x: hidden;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <link href="assets/site.css" rel="stylesheet"/>
 </head>
-<body class="bg-white">
-    <!-- Navigation (Konsisten sebiji seperti halaman lain) -->
+<body>
+    <!-- Navigation -->
     <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-5 lg:px-8 flex items-center justify-between h-20">
-            <div class="flex flex-col z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-5 lg:px-8 flex items-center justify-between h-20">
+            <a href="index.html" class="flex flex-col z-50">
                 <span class="text-xl sm:text-2xl font-bold text-black leading-tight">Muhammad Ikhwan</span>
-                <span class="text-[10px] sm:text-xs uppercase text-gray-500 font-bold tracking-wider">Full-Stack Engineer</span>
-            </div>
-            
+                <span class="text-[10px] sm:text-xs uppercase text-gray-500 font-bold tracking-wider">Full-Stack Web Developer</span>
+            </a>
+
             <nav class="hidden lg:flex items-center gap-8">
                 <a href="index.html" class="text-gray-600 hover:text-black transition">Home</a>
                 <a href="experience.html" class="text-gray-600 hover:text-black transition">Experience</a>
@@ -37,280 +35,202 @@
                 <a href="resume.html" class="bg-black text-white px-6 py-2.5 rounded-lg hover:bg-gray-800 transition font-semibold text-sm">Resume</a>
             </nav>
 
-            <button id="menu-btn" class="lg:hidden z-50 p-2 -mr-2 text-black focus:outline-none">
-                <span class="material-symbols-outlined text-3xl transition-transform duration-300" id="menu-icon">menu</span>
+            <button id="menu-btn" class="lg:hidden z-50 p-2 -mr-2 text-black focus:outline-none" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay (Konsisten) -->
-    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden pt-24">
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full invisible transition-[transform,visibility] duration-300 ease-in-out lg:hidden pt-24">
         <div class="flex flex-col px-6 gap-6 text-xl">
             <a href="index.html" class="text-gray-600 font-medium border-b border-gray-100 pb-4">Home</a>
             <a href="experience.html" class="text-gray-600 font-medium border-b border-gray-100 pb-4">Experience</a>
             <a href="projects.html" class="text-black font-bold border-b border-gray-100 pb-4">Projects</a>
             <a href="skills.html" class="text-gray-600 font-medium border-b border-gray-100 pb-4">Skills</a>
-            <a href="resume.html" class="bg-black text-white px-6 py-4 rounded-xl text-center font-bold mt-4">Download Resume</a>
+            <a href="resume.html" class="bg-black text-white px-6 py-4 rounded-xl text-center font-bold mt-4">Resume</a>
         </div>
     </div>
 
     <main class="pt-32 pb-20">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            <!-- Header -->
-            <div class="mb-16">
-                <h1 class="text-5xl lg:text-6xl font-bold text-black mb-4">Selected Works</h1>
-                <p class="text-xl text-gray-600 max-w-3xl">A collection of projects demonstrating full-stack development, IoT integration, and architectural expertise.</p>
+        <div class="max-w-6xl mx-auto px-4 sm:px-5 lg:px-8">
+            <div class="mb-12 lg:mb-16">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4">Projects</h1>
+                <p class="text-lg text-gray-600 max-w-3xl">What I built, what I used, and what came of it.</p>
             </div>
 
-            <!-- Featured Project -->
-            <div class="mb-20 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden shadow-xl">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                    <div class="relative h-96 lg:h-full min-h-96 bg-gradient-to-br from-blue-600 to-gray-900 flex items-center justify-center lg:min-h-auto">
-                        <div class="text-center text-white">
-                            <span class="material-symbols-outlined text-8xl opacity-50">water_science</span>
-                            <p class="text-lg mt-4 opacity-70">Aquaculture Monitoring System</p>
+            <!-- Featured: DefexSnap -->
+            <section class="mb-16 bg-gray-900 text-white rounded-2xl overflow-hidden shadow-xl">
+                <div class="p-6 sm:p-10 lg:p-12">
+                    <p class="text-xs sm:text-sm font-semibold text-emerald-300 uppercase tracking-wider mb-3">Featured · Freelance Project · 2026</p>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">DefexSnap</h2>
+                    <p class="text-lg sm:text-xl text-gray-300 mb-1">Property Inspection Platform</p>
+                    <p class="text-sm text-gray-400 mb-8">Role: Lead Developer</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-8">
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-5 sm:p-6">
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">Problem</h3>
+                            <p class="text-gray-200 leading-relaxed">A one-person inspection startup was writing every inspection report by hand, which capped how many projects the owner could take on.</p>
                         </div>
-                    </div>
-                    <div class="p-8 lg:p-16 text-white flex flex-col justify-center">
-                        <span class="text-sm font-semibold text-blue-300 uppercase tracking-wider mb-4">Featured • Final Year Project</span>
-                        <h2 class="text-4xl lg:text-5xl font-bold mb-6">Tilapia Fish Monitoring System</h2>
-                        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
-                            A comprehensive smart aquaculture platform integrating IoT and AI to optimize tilapia farming. Utilizing ESP32 microcontrollers, the system continuously tracks critical water parameters (pH, temperature, dissolved oxygen). An integrated AI model analyzes real-time data to predict environmental anomalies, ensuring optimal yield and reducing mortality rates.
-                        </p>
-                        <div class="mb-8">
-                            <h4 class="font-semibold mb-4 text-white">Key Achievements:</h4>
-                            <ul class="space-y-2 text-gray-300">
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-green-400 mt-1">check_circle</span>
-                                    <span>Real-time data collection from multiple sensor nodes</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-green-400 mt-1">check_circle</span>
-                                    <span>AI-powered anomaly detection for early intervention</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="material-symbols-outlined text-green-400 mt-1">check_circle</span>
-                                    <span>Cloud-based analytics dashboard for remote monitoring</span>
-                                </li>
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-5 sm:p-6">
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">What I built</h3>
+                            <ul class="bullets text-gray-200">
+                                <li>Proposed and built, from scratch, an automated inspection reporting platform to replace the manual process.</li>
+                                <li>Dynamic PDF engine that auto-generates inspection reports and invoices.</li>
                             </ul>
                         </div>
-                        <div class="flex flex-wrap gap-3 mb-8">
-                            <span class="px-4 py-2 bg-white/10 text-white rounded-full font-semibold text-sm border border-white/20">ESP32</span>
-                            <span class="px-4 py-2 bg-white/10 text-white rounded-full font-semibold text-sm border border-white/20">IoT</span>
-                            <span class="px-4 py-2 bg-white/10 text-white rounded-full font-semibold text-sm border border-white/20">AI/ML</span>
-                            <span class="px-4 py-2 bg-white/10 text-white rounded-full font-semibold text-sm border border-white/20">Python</span>
-                            <span class="px-4 py-2 bg-white/10 text-white rounded-full font-semibold text-sm border border-white/20">C++</span>
-                            <span class="px-4 py-2 bg-white/10 text-white rounded-full font-semibold text-sm border border-white/20">Real-time Analytics</span>
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-5 sm:p-6">
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">Result</h3>
+                            <p class="text-3xl sm:text-4xl font-bold mb-2">8–12 → 30+</p>
+                            <p class="text-gray-200 leading-relaxed">inspection reports a month, letting the owner take on more projects and increase revenue.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-5 sm:p-6">
+                            <h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3">Clients</h3>
+                            <p class="text-gray-200 mb-3">Deployed and maintained in production for two clients:</p>
+                            <ul class="bullets text-gray-200">
+                                <li><span class="font-semibold text-white">Defect Guru</span> (6 months, ongoing)</li>
+                                <li><span class="font-semibold text-white">Benamora Sdn Bhd</span> (5 months)</li>
+                            </ul>
                         </div>
                     </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip chip-dark">Laravel</span>
+                        <span class="chip chip-dark">PHP</span>
+                        <span class="chip chip-dark">MySQL</span>
+                        <span class="chip chip-dark">Tailwind CSS</span>
+                        <span class="chip chip-dark">Alpine.js</span>
+                        <span class="chip chip-dark">Nginx</span>
+                        <span class="chip chip-dark">Linux VPS</span>
+                    </div>
+
+                    <!-- Screenshots: client figures and addresses are blurred; keep it that way for any new ones -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                        <figure>
+                            <a href="images/defexsnap-dashboard.webp" target="_blank"><img src="images/defexsnap-dashboard.webp" alt="DefexSnap dashboard with sales trend and property type charts (figures blurred)" width="1400" height="569" loading="lazy" class="w-full rounded-lg border border-white/10"></a>
+                            <figcaption class="text-xs text-gray-400 mt-2">Dashboard (client figures blurred)</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="images/defexsnap-add-defect.webp" target="_blank"><img src="images/defexsnap-add-defect.webp" alt="DefexSnap form for adding an inspection item, with a floor plan to mark the defect location" width="1400" height="689" loading="lazy" class="w-full rounded-lg border border-white/10"></a>
+                            <figcaption class="text-xs text-gray-400 mt-2">Adding a defect: click the floor plan to mark its location</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="images/defexsnap-login.webp" target="_blank"><img src="images/defexsnap-login.webp" alt="DefexSnap login page branded for Defect Guru" width="1091" height="741" loading="lazy" class="w-full rounded-lg border border-white/10"></a>
+                            <figcaption class="text-xs text-gray-400 mt-2">Client-branded login (Defect Guru)</figcaption>
+                        </figure>
+                    </div>
                 </div>
+            </section>
+
+            <!-- Main projects -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                <article class="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8 flex flex-col">
+                    <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Final Year Project · 2026</p>
+                    <h2 class="text-2xl font-bold text-black mb-1">Tilapia Fish Monitoring System: A Smart Aquaculture Monitoring Platform Using IoT and AI</h2>
+                    <p class="text-sm text-gray-500 mb-4">Role: Lead Full-Stack &amp; IoT Developer</p>
+                    <p class="text-gray-700 mb-4 leading-relaxed">Real-time water-quality monitoring for Red Hybrid Tilapia aquaculture.</p>
+                    <ul class="bullets text-gray-700 text-sm sm:text-base mb-6">
+                        <li>ESP32 firmware in C++ with 3-point piecewise linear ADC calibration for pH, DS18B20 temperature probes, and telemetry over MQTT.</li>
+                        <li>Admin dashboard with multi-interval charts (5 min – 30 days), a real-time pond health score (0–100%) and an automated risk module that suggests mitigation steps.</li>
+                        <li>Multi-tier authentication and MAC-address device pairing; backend deployed on AWS EC2 with Nginx.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-6 border-t border-gray-100">
+                        <span class="chip">Laravel</span>
+                        <span class="chip">Filament v3</span>
+                        <span class="chip">Livewire</span>
+                        <span class="chip">MySQL</span>
+                        <span class="chip">AWS EC2</span>
+                        <span class="chip">Nginx</span>
+                        <span class="chip">ESP32 (C/C++)</span>
+                        <span class="chip">MQTT</span>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8 flex flex-col">
+                    <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Academic Project</p>
+                    <h2 class="text-2xl font-bold text-black mb-4">Java EE E-Commerce &amp; Shop Management Platform</h2>
+                    <ul class="bullets text-gray-700 text-sm sm:text-base mb-6">
+                        <li>MVC architecture: Servlets for request routing and business logic, JSP for dynamic views, and a DAO data layer over Oracle via JDBC.</li>
+                        <li>Modules: catalogue and inventory (product variants, image upload), staff and role management, and sales and customer analytics dashboards.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-6 border-t border-gray-100">
+                        <span class="chip">Java</span>
+                        <span class="chip">Java Servlets</span>
+                        <span class="chip">JSP</span>
+                        <span class="chip">JDBC</span>
+                        <span class="chip">Oracle Database</span>
+                        <span class="chip">MVC</span>
+                        <span class="chip">DAO pattern</span>
+                    </div>
+                </article>
             </div>
 
-            <!-- Academic Projects -->
-            <div class="mb-12">
-                <h3 class="text-3xl font-bold text-black mb-8">Academic & Practical Projects</h3>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Project 1: Parcel Management -->
-                <div class="bg-white rounded-xl border-2 border-gray-200 overflow-hidden hover:shadow-xl transition hover:-translate-y-2 group cursor-pointer">
-                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-6xl text-white opacity-80">local_shipping</span>
+            <!-- Smaller academic projects -->
+            <h2 class="text-xl sm:text-2xl font-bold text-black mb-6">Smaller academic projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <article class="bg-white rounded-xl border border-gray-200 p-5">
+                    <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Academic Project</p>
+                    <h3 class="font-bold text-black mb-3">Parcel Management System</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip">PHP</span>
+                        <span class="chip">MySQL</span>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-black mb-3">Parcel Management System</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            A robust web-based solution for tracking and managing internal university parcel deliveries. Features role-based access control, automated notification systems, and a scalable database architecture designed for institutional use.
-                        </p>
-                        <div class="mb-6">
-                            <h4 class="font-semibold text-black mb-3">Features:</h4>
-                            <ul class="space-y-2 text-sm text-gray-600">
-                                <li class="flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">check</span>
-                                    Real-time parcel tracking
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">check</span>
-                                    Role-based user management
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">check</span>
-                                    Automated notifications
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="flex flex-wrap gap-2 pt-6 border-t border-gray-200">
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">PHP</span>
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">MySQL</span>
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">JavaScript</span>
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">Bootstrap</span>
-                        </div>
+                </article>
+                <article class="bg-white rounded-xl border border-gray-200 p-5">
+                    <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Academic Project</p>
+                    <h3 class="font-bold text-black mb-3">OOP Inventory Management</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip">Java</span>
+                        <span class="chip">OOP</span>
                     </div>
-                </div>
-
-                <!-- Project 2: Inventory Management -->
-                <div class="bg-white rounded-xl border-2 border-gray-200 overflow-hidden hover:shadow-xl transition hover:-translate-y-2 group cursor-pointer">
-                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-6xl text-white opacity-80">inventory_2</span>
+                </article>
+                <article class="bg-white rounded-xl border border-gray-200 p-5">
+                    <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Academic Project</p>
+                    <h3 class="font-bold text-black mb-3">Car Wash System</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="chip">Java</span>
+                        <span class="chip">Linked lists</span>
+                        <span class="chip">Queues</span>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-black mb-3">OOP Inventory Management</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            A desktop application demonstrating advanced Object-Oriented Programming principles. Implements inheritance, polymorphism, and sophisticated design patterns for efficient stock control and reporting.
-                        </p>
-                        <div class="mb-6">
-                            <h4 class="font-semibold text-black mb-3">Features:</h4>
-                            <ul class="space-y-2 text-sm text-gray-600">
-                                <li class="flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">check</span>
-                                    Inventory tracking and management
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">check</span>
-                                    Real-time reporting
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">check</span>
-                                    Advanced OOP design patterns
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="flex flex-wrap gap-2 pt-6 border-t border-gray-200">
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">Java</span>
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">JavaFX</span>
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">SQLite</span>
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">OOP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: Car Wash System -->
-                <div class="bg-white rounded-xl border-2 border-gray-200 overflow-hidden hover:shadow-xl transition hover:-translate-y-2 group cursor-pointer">
-                    <div class="h-48 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-6xl text-white opacity-80">directions_car</span>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-black mb-3">Car Wash System</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            A data structure implementation project using LinkedList and Queue data structures. Enables efficient booking and operation data tracking for car wash facilities with optimized queue management.
-                        </p>
-                        <div class="mb-6">
-                            <h4 class="font-semibold text-black mb-3">Features:</h4>
-                            <ul class="space-y-2 text-sm text-gray-600">
-                                <li class="flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">check</span>
-                                    Queue-based booking system
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">check</span>
-                                    Efficient data management
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">check</span>
-                                    Admin tracking interface
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="flex flex-wrap gap-2 pt-6 border-t border-gray-200">
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">Java</span>
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">Data Structures</span>
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">LinkedList</span>
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">Queue</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4: defeXsnap -->
-                <div class="bg-white rounded-xl border-2 border-gray-200 overflow-hidden hover:shadow-xl transition hover:-translate-y-2 group cursor-pointer">
-                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-6xl text-white opacity-80">assessment</span>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-black mb-3">defeXsnap</h3>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            A specialized web-based inspection reporting tool designed for field teams and quality assurance professionals. Streamlines data collection, analysis, and reporting processes with mobile-responsive design.
-                        </p>
-                        <div class="mb-6">
-                            <h4 class="font-semibold text-black mb-3">Features:</h4>
-                            <ul class="space-y-2 text-sm text-gray-600">
-                                <li class="flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">check</span>
-                                    Mobile-optimized interface
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">check</span>
-                                    Real-time reporting
-                                </li>
-                                <li class="flex items-center gap-2">
-                                    <span class="material-symbols-outlined text-sm">check</span>
-                                    Data analytics dashboard
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="flex flex-wrap gap-2 pt-6 border-t border-gray-200">
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">Full Stack</span>
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">Web App</span>
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">Responsive</span>
-                            <span class="text-xs font-mono text-gray-600 bg-gray-50 px-3 py-1 rounded">Production</span>
-                        </div>
-                    </div>
-                </div>
+                </article>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800 mt-20">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+    <footer class="bg-gray-950 text-white py-12 lg:py-16 border-t border-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-5 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 mb-12">
                 <div>
-                    <h3 class="font-bold text-lg mb-4">Muhammad Ikhwan Ariff</h3>
-                    <p class="text-gray-400">Full-Stack Developer & IT Specialist</p>
+                    <h3 class="font-bold text-xl mb-2">Muhammad Ikhwan Ariff</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Full-Stack Web Developer · Kajang, Selangor, Malaysia</p>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Navigation</h4>
-                    <div class="space-y-2 text-gray-400">
+                    <h4 class="font-bold text-gray-100 mb-4 uppercase tracking-wider text-sm">Navigation</h4>
+                    <div class="space-y-3 text-gray-400 text-sm font-medium">
                         <p><a href="index.html" class="hover:text-white transition">Home</a></p>
                         <p><a href="experience.html" class="hover:text-white transition">Experience</a></p>
                         <p><a href="projects.html" class="hover:text-white transition">Projects</a></p>
                         <p><a href="skills.html" class="hover:text-white transition">Skills</a></p>
+                        <p><a href="resume.html" class="hover:text-white transition">Resume</a></p>
                     </div>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Connect</h4>
-                    <div class="space-y-2 text-gray-400">
-                        <p><a href="mailto:ikhwanariff255@gmail.com" class="hover:text-white transition">Email</a></p>
-                        <p><a href="tel:+60182575321" class="hover:text-white transition">+60 182 575 321</a></p>
-                        <p><a href="#" class="hover:text-white transition">LinkedIn</a></p>
-                        <p><a href="#" class="hover:text-white transition">GitHub</a></p>
+                    <h4 class="font-bold text-gray-100 mb-4 uppercase tracking-wider text-sm">Connect</h4>
+                    <div class="space-y-3 text-gray-400 text-sm font-medium">
+                        <p><a href="mailto:ikhwanariff255@gmail.com" class="hover:text-white transition flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">mail</span> ikhwanariff255@gmail.com</a></p>
+                        <p><a href="tel:+60182575321" class="hover:text-white transition flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">call</span> +60 18-257 5321</a></p>
+                        <p><a href="https://www.linkedin.com/in/ikhwan-ariff-31864a323" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">link</span> LinkedIn</a></p>
+                        <p><a href="https://github.com/ikhwanariff255" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">code</span> GitHub</a></p>
                     </div>
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8">
-                <p class="text-center text-gray-400">© 2024 Muhammad Ikhwan Ariff. Crafted with precision & intent.</p>
+                <p class="text-center md:text-left text-gray-500 text-sm">© <span data-year>2026</span> Muhammad Ikhwan Ariff</p>
             </div>
         </div>
     </footer>
 
-    <!-- Skrip Mobile Menu Konsisten -->
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        let isMenuOpen = false;
-
-        menuBtn.addEventListener('click', () => {
-            isMenuOpen = !isMenuOpen;
-            if(isMenuOpen) {
-                mobileMenu.classList.remove('translate-x-full');
-                menuIcon.textContent = 'close';
-                document.body.style.overflow = 'hidden';
-            } else {
-                mobileMenu.classList.add('translate-x-full');
-                menuIcon.textContent = 'menu';
-                document.body.style.overflow = '';
-            }
-        });
-    </script>
+    <script src="assets/site.js"></script>
 </body>
 </html>

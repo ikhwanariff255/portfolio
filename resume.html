@@ -3,167 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume | Muhammad Ikhwan Ariff</title>
+    <title>Resume | Muhammad Ikhwan Ariff, Full-Stack Web Developer</title>
+    <meta name="description" content="Resume of Muhammad Ikhwan Ariff, Full-Stack Web Developer and UiTM Computer Science student. Available for a 3-month internship, March to June 2027.">
+    <link rel="canonical" href="https://ikhwanariff.site/resume">
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Muhammad Ikhwan Ariff">
+    <meta property="og:title" content="Resume | Muhammad Ikhwan Ariff, Full-Stack Web Developer">
+    <meta property="og:description" content="Full-Stack Web Developer and UiTM Computer Science student. Available for a 3-month internship, March to June 2027.">
+    <meta property="og:url" content="https://ikhwanariff.site/resume">
+    <meta property="og:image" content="https://ikhwanariff.site/gambar-ikhwan.jpg">
+    <meta name="twitter:card" content="summary">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+    <link href="assets/site.css" rel="stylesheet"/>
+    <style media="print">
+        header, footer, #mobile-menu, .no-print { display: none !important; }
+        body { background: white; }
+        main { padding-top: 0 !important; }
+    </style>
 </head>
-<body class="bg-white">
+<body>
     <!-- Navigation -->
-    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
-            <div class="flex flex-col">
-                <span class="text-2xl font-bold text-black">Muhammad Ikhwan Ariff</span>
-                <span class="text-xs uppercase text-gray-600 font-semibold tracking-wide">Full-Stack Engineer</span>
-            </div>
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl shadow-sm border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-5 lg:px-8 flex items-center justify-between h-20">
+            <a href="index.html" class="flex flex-col z-50">
+                <span class="text-xl sm:text-2xl font-bold text-black leading-tight">Muhammad Ikhwan</span>
+                <span class="text-[10px] sm:text-xs uppercase text-gray-500 font-bold tracking-wider">Full-Stack Web Developer</span>
+            </a>
+
             <nav class="hidden lg:flex items-center gap-8">
                 <a href="index.html" class="text-gray-600 hover:text-black transition">Home</a>
                 <a href="experience.html" class="text-gray-600 hover:text-black transition">Experience</a>
                 <a href="projects.html" class="text-gray-600 hover:text-black transition">Projects</a>
                 <a href="skills.html" class="text-gray-600 hover:text-black transition">Skills</a>
-                <a href="resume.html" class="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition font-semibold">Resume</a>
+                <a href="resume.html" class="bg-black text-white px-6 py-2.5 rounded-lg hover:bg-gray-800 transition font-semibold text-sm">Resume</a>
             </nav>
-            <button id="menu-btn" class="lg:hidden">
-                <span class="material-symbols-outlined">menu</span>
+
+            <button id="menu-btn" class="lg:hidden z-50 p-2 -mr-2 text-black focus:outline-none" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
             </button>
         </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden fixed top-20 w-full bg-white shadow-lg z-40 lg:hidden">
-        <div class="flex flex-col p-6 gap-4">
-            <a href="index.html" class="text-gray-600">Home</a>
-            <a href="experience.html" class="text-gray-600">Experience</a>
-            <a href="projects.html" class="text-gray-600">Projects</a>
-            <a href="skills.html" class="text-gray-600">Skills</a>
-            <a href="resume.html" class="bg-black text-white px-6 py-2 rounded-lg text-center font-semibold">Resume</a>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full invisible transition-[transform,visibility] duration-300 ease-in-out lg:hidden pt-24">
+        <div class="flex flex-col px-6 gap-6 text-xl">
+            <a href="index.html" class="text-gray-600 font-medium border-b border-gray-100 pb-4">Home</a>
+            <a href="experience.html" class="text-gray-600 font-medium border-b border-gray-100 pb-4">Experience</a>
+            <a href="projects.html" class="text-gray-600 font-medium border-b border-gray-100 pb-4">Projects</a>
+            <a href="skills.html" class="text-gray-600 font-medium border-b border-gray-100 pb-4">Skills</a>
+            <a href="resume.html" class="bg-black text-white px-6 py-4 rounded-xl text-center font-bold mt-4">Resume</a>
         </div>
     </div>
 
     <main class="pt-32 pb-20">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8">
-            <!-- Download Button -->
-            <div class="mb-12 flex gap-4 justify-center">
-                <button onclick="window.print()" class="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition font-semibold flex items-center gap-2">
+        <div class="max-w-4xl mx-auto px-4 sm:px-5 lg:px-8">
+            <div class="no-print mb-10 flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="Ikhwan_Ariff_Resume_Internship_2027.pdf" download class="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition font-semibold flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">download</span>
+                    Download PDF
+                </a>
+                <button type="button" onclick="window.print()" class="border-2 border-gray-200 bg-white text-black px-8 py-3 rounded-lg hover:border-gray-800 transition font-semibold flex items-center justify-center gap-2">
                     <span class="material-symbols-outlined">print</span>
-                    Print / Save as PDF
+                    Print
                 </button>
             </div>
 
-            <!-- Resume Content -->
-            <div class="bg-white">
+            <article class="bg-white rounded-2xl border border-gray-200 p-6 sm:p-10">
                 <!-- Header -->
                 <div class="mb-8">
-                    <h1 class="text-4xl font-bold text-black mb-2">Muhammad Ikhwan Ariff Bin Shahrul Nizam</h1>
-                    <p class="text-gray-600 mb-4">Full-Stack Developer & IT Specialist | Currently Pursuing BS Computer Science</p>
-                    <div class="flex flex-wrap gap-6 text-sm text-gray-600">
-                        <a href="mailto:ikhwanariff255@gmail.com" class="flex items-center gap-2 hover:text-black transition">
-                            <span class="material-symbols-outlined text-lg">mail</span>
-                            ikhwanariff255@gmail.com
-                        </a>
-                        <a href="tel:+60182575321" class="flex items-center gap-2 hover:text-black transition">
-                            <span class="material-symbols-outlined text-lg">phone</span>
-                            +60 182 575 321
-                        </a>
-                        <p class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-lg">location_on</span>
-                            Kajang, Selangor, Malaysia
-                        </p>
+                    <h1 class="text-2xl sm:text-4xl font-bold text-black mb-2">Muhammad Ikhwan Ariff bin Shahrul Nizam</h1>
+                    <p class="text-lg text-gray-700 mb-4">Full-Stack Web Developer</p>
+                    <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
+                        <a href="mailto:ikhwanariff255@gmail.com" class="flex items-center gap-2 hover:text-black transition break-all"><span class="material-symbols-outlined text-lg">mail</span>ikhwanariff255@gmail.com</a>
+                        <a href="tel:+60182575321" class="flex items-center gap-2 hover:text-black transition"><span class="material-symbols-outlined text-lg">call</span>+60 18-257 5321</a>
+                        <span class="flex items-center gap-2"><span class="material-symbols-outlined text-lg">location_on</span>Kajang, Selangor, Malaysia</span>
+                        <a href="https://www.linkedin.com/in/ikhwan-ariff-31864a323" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-black transition"><span class="material-symbols-outlined text-lg">link</span>LinkedIn</a>
                     </div>
+                    <p class="mt-4 text-sm font-semibold text-black">Internship availability: March – June 2027 (3 months)</p>
                 </div>
-
-                <hr class="my-8">
-
-                <!-- Professional Summary -->
-                <section class="mb-8">
-                    <h2 class="text-2xl font-bold text-black mb-4">Professional Summary</h2>
-                    <p class="text-gray-700 leading-relaxed">
-                        Currently in the 5th semester of the Bachelor's degree program in Computer Science at Universiti Teknologi MARA (UiTM). Strong foundation from Diploma in Computer Science (CGPA: 3.48/4.00). Passionate about engineering scalable web applications, IoT systems integration, and enterprise-level software architecture. Proven track record of delivering successful commercial solutions and a commitment to bridging theoretical computer science with practical, high-performance deployment.
-                    </p>
-                </section>
 
                 <hr class="my-8">
 
                 <!-- Education -->
                 <section class="mb-8">
-                    <h2 class="text-2xl font-bold text-black mb-4">Education</h2>
-                    
+                    <h2 class="text-xl sm:text-2xl font-bold text-black mb-4">Education</h2>
                     <div class="mb-6">
-                        <div class="flex justify-between items-start mb-2">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-2">
                             <div>
-                                <h3 class="text-xl font-bold text-black">Bachelor of Science in Computer Science</h3>
+                                <h3 class="text-lg font-bold text-black">Bachelor of Computer Science (Hons)</h3>
                                 <p class="text-gray-700">Universiti Teknologi MARA (UiTM)</p>
                             </div>
-                            <p class="text-gray-600 font-semibold">Current (5th Semester)</p>
+                            <p class="text-gray-600 font-semibold text-sm sm:text-right shrink-0">Mar 2025 – Oct 2027 (Expected)</p>
                         </div>
-                        <p class="text-gray-600 text-sm mb-2">Relevant Coursework: Full-Stack Development, Web Architecture, Database Design, IoT Systems, Information System Development</p>
+                        <p class="text-gray-600 text-sm mb-1"><span class="font-semibold">CGPA:</span> 3.52 / 4.00</p>
+                        <p class="text-gray-600 text-sm"><span class="font-semibold">Coursework:</span> Software Engineering, Enterprise Programming, Database Engineering, AI Algorithms, Algorithm Analysis and Design, Computer Security</p>
                     </div>
-
                     <div>
-                        <div class="flex justify-between items-start mb-2">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-2">
                             <div>
-                                <h3 class="text-xl font-bold text-black">Diploma in Computer Science</h3>
+                                <h3 class="text-lg font-bold text-black">Diploma in Computer Science</h3>
                                 <p class="text-gray-700">Universiti Teknologi MARA (UiTM)</p>
                             </div>
-                            <p class="text-gray-600 font-semibold">Oct 2023 - Feb 2025</p>
+                            <p class="text-gray-600 font-semibold text-sm sm:text-right shrink-0">Oct 2022 – Mar 2025</p>
                         </div>
-                        <p class="text-gray-600 mb-2"><span class="font-semibold">CGPA:</span> 3.48 / 4.00</p>
-                        <p class="text-gray-600 text-sm">Relevant Coursework: Object-Oriented Programming, Data Structures, Web & Mobile Application, Database Design</p>
+                        <p class="text-gray-600 text-sm"><span class="font-semibold">CGPA:</span> 3.43 / 4.00</p>
                     </div>
                 </section>
 
                 <hr class="my-8">
 
-                <!-- Professional Experience -->
+                <!-- Experience -->
                 <section class="mb-8">
-                    <h2 class="text-2xl font-bold text-black mb-4">Professional Experience</h2>
-                    
-                    <div class="mb-8">
-                        <div class="flex justify-between items-start mb-2">
+                    <h2 class="text-xl sm:text-2xl font-bold text-black mb-4">Experience</h2>
+                    <div class="mb-6">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-2">
                             <div>
-                                <h3 class="text-xl font-bold text-black">Lead Developer (Freelance/Entrepreneurial)</h3>
-                                <p class="text-gray-700 font-semibold">defeXsnap</p>
+                                <h3 class="text-lg font-bold text-black">Freelance Web Developer</h3>
+                                <p class="text-gray-700">Defect Guru (Miyya Inspection), Kajang, Selangor (Hybrid)</p>
                             </div>
-                            <p class="text-gray-600 font-semibold">Present</p>
+                            <p class="text-gray-600 font-semibold text-sm sm:text-right shrink-0">Feb 2026 – Present</p>
                         </div>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Architected and deployed defeXsnap, a specialized web-based inspection reporting tool</li>
-                            <li>Successfully deployed across 2+ major commercial entities</li>
-                            <li>Achieved 40% improvement in reporting efficiency for clients</li>
-                            <li>Designed full-stack architecture for scalable field-data collection platform</li>
-                            <li>Responsible for product strategy, client management, and continuous platform enhancement</li>
+                        <ul class="bullets text-gray-700 text-sm sm:text-base">
+                            <li>Build and maintain the company's official website as its main technical contact (updates, troubleshooting, fixes).</li>
+                            <li>Manage hosting on a Linux VPS: Nginx configuration, SSL/TLS (Certbot), custom domain routing.</li>
                         </ul>
                     </div>
-
-                    <div class="mb-8">
-                        <div class="flex justify-between items-start mb-2">
+                    <div class="mb-6">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-2">
                             <div>
-                                <h3 class="text-xl font-bold text-black">IT Intern</h3>
-                                <p class="text-gray-700 font-semibold">LPPSA (Lembaga Pembiayaan Perumahan Sektor Awam)</p>
+                                <h3 class="text-lg font-bold text-black">Information Technology Intern</h3>
+                                <p class="text-gray-700">Public Sector Home Financing Board (LPPSA), Putrajaya</p>
                             </div>
-                            <p class="text-gray-600 font-semibold">2024</p>
+                            <p class="text-gray-600 font-semibold text-sm sm:text-right shrink-0">Oct 2024 – Feb 2025</p>
                         </div>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Gained foundational corporate engineering experience in high-compliance environment</li>
-                            <li>Focused on backend systems development using Laravel framework</li>
-                            <li>Optimized database queries and improved system performance</li>
-                            <li>Worked on enterprise application architecture and database management</li>
+                        <ul class="bullets text-gray-700 text-sm sm:text-base">
+                            <li>Contributed to system enhancements using Laravel in the organisation's web applications.</li>
+                            <li>Took part in User Acceptance Testing (UAT) to validate new modules against user requirements.</li>
+                            <li>Assisted the core development team with troubleshooting and technical tasks.</li>
                         </ul>
                     </div>
-
-                    <div>
-                        <div class="flex justify-between items-start mb-2">
-                            <div>
-                                <h3 class="text-xl font-bold text-black">Event Crew & Promoter</h3>
-                                <p class="text-gray-700 font-semibold">Genting Skyworld & Putrajaya Open Day</p>
-                            </div>
-                            <p class="text-gray-600 font-semibold">Jan - Sep 2023</p>
-                        </div>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Event area preparation and logistical coordination</li>
-                            <li>Crowd management and customer assistance</li>
-                            <li>Product promotion and brand awareness activities</li>
-                        </ul>
+                    <div class="flex flex-col sm:flex-row sm:justify-between gap-1">
+                        <p class="text-gray-700"><span class="font-bold text-black">Promoter</span>, Genting SkyWorlds</p>
+                        <p class="text-gray-600 font-semibold text-sm">Aug 2023 – Sep 2023</p>
                     </div>
                 </section>
 
@@ -171,153 +154,116 @@
 
                 <!-- Projects -->
                 <section class="mb-8">
-                    <h2 class="text-2xl font-bold text-black mb-4">Key Projects</h2>
-                    
+                    <h2 class="text-xl sm:text-2xl font-bold text-black mb-4">Projects</h2>
                     <div class="mb-6">
-                        <h3 class="text-lg font-bold text-black mb-2">Tilapia Fish Monitoring System (FYP)</h3>
-                        <p class="text-gray-600 mb-2">IoT & AI-powered aquaculture monitoring platform using ESP32 microcontrollers</p>
-                        <p class="text-gray-600 text-sm"><span class="font-semibold">Technologies:</span> ESP32, IoT, Python, C++, AI/ML, Real-time Analytics</p>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-1">
+                            <h3 class="text-lg font-bold text-black">DefexSnap: Property Inspection Platform</h3>
+                            <p class="text-gray-600 font-semibold text-sm sm:text-right shrink-0">Freelance Project, 2026</p>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-2">Lead Developer · Laravel, PHP, MySQL, Tailwind CSS, Alpine.js, Nginx, Linux VPS</p>
+                        <ul class="bullets text-gray-700 text-sm sm:text-base">
+                            <li>Proposed and built from scratch an automated inspection reporting platform, replacing the manual process of a one-person inspection startup.</li>
+                            <li>Monthly output went from 8–12 to 30+ inspection reports, allowing the owner to take on more projects and increase revenue.</li>
+                            <li>Dynamic PDF engine that auto-generates inspection reports and invoices.</li>
+                            <li>Deployed and maintained in production for two clients: Defect Guru (6 months, ongoing) and Benamora Sdn Bhd (5 months).</li>
+                        </ul>
                     </div>
-
                     <div class="mb-6">
-                        <h3 class="text-lg font-bold text-black mb-2">defeXsnap</h3>
-                        <p class="text-gray-600 mb-2">Web-based inspection reporting tool serving multiple commercial companies</p>
-                        <p class="text-gray-600 text-sm"><span class="font-semibold">Technologies:</span> Full Stack Web Development, Database Design, Product Strategy</p>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-1">
+                            <h3 class="text-lg font-bold text-black">Tilapia Fish Monitoring System: A Smart Aquaculture Monitoring Platform Using IoT and AI</h3>
+                            <p class="text-gray-600 font-semibold text-sm sm:text-right shrink-0">Final Year Project, 2026</p>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-2">Lead Full-Stack &amp; IoT Developer · Laravel, Filament v3, Livewire, MySQL, AWS EC2, Nginx, ESP32 (C/C++), MQTT</p>
+                        <ul class="bullets text-gray-700 text-sm sm:text-base">
+                            <li>Real-time water-quality monitoring for Red Hybrid Tilapia aquaculture.</li>
+                            <li>ESP32 firmware in C++ with 3-point piecewise linear ADC calibration for pH, DS18B20 temperature probes, telemetry over MQTT.</li>
+                            <li>Admin dashboard with multi-interval charts (5 min – 30 days), a real-time pond health score (0–100%) and an automated risk module that suggests mitigation steps.</li>
+                            <li>Multi-tier authentication and MAC-address device pairing; backend deployed on AWS EC2 with Nginx.</li>
+                        </ul>
                     </div>
-
                     <div class="mb-6">
-                        <h3 class="text-lg font-bold text-black mb-2">Parcel Management System</h3>
-                        <p class="text-gray-600 mb-2">Web application for university parcel tracking with role-based access control</p>
-                        <p class="text-gray-600 text-sm"><span class="font-semibold">Technologies:</span> PHP, MySQL, JavaScript, Bootstrap</p>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-1">
+                            <h3 class="text-lg font-bold text-black">Java EE E-Commerce &amp; Shop Management Platform</h3>
+                            <p class="text-gray-600 font-semibold text-sm sm:text-right shrink-0">Academic Project</p>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-2">Java, Java Servlets, JSP, JDBC, Oracle Database · MVC, DAO pattern</p>
+                        <ul class="bullets text-gray-700 text-sm sm:text-base">
+                            <li>MVC architecture: Servlets for request routing and business logic, JSP for dynamic views, DAO data layer over Oracle via JDBC.</li>
+                            <li>Modules: catalogue and inventory (product variants, image upload), staff and role management, sales and customer analytics dashboards.</li>
+                        </ul>
                     </div>
-
-                    <div class="mb-6">
-                        <h3 class="text-lg font-bold text-black mb-2">OOP Inventory Management System</h3>
-                        <p class="text-gray-600 mb-2">Desktop application demonstrating advanced OOP principles and design patterns</p>
-                        <p class="text-gray-600 text-sm"><span class="font-semibold">Technologies:</span> Java, JavaFX, SQLite, OOP Design Patterns</p>
-                    </div>
-
-                    <div>
-                        <h3 class="text-lg font-bold text-black mb-2">Car Wash System</h3>
-                        <p class="text-gray-600 mb-2">Queue-based booking system using advanced data structures</p>
-                        <p class="text-gray-600 text-sm"><span class="font-semibold">Technologies:</span> Java, LinkedList, Queue Data Structures</p>
-                    </div>
+                    <p class="text-sm text-gray-700"><span class="font-semibold text-black">Other academic projects:</span> Parcel Management System (PHP, MySQL), OOP Inventory Management (Java), Car Wash System (Java, linked lists and queues).</p>
                 </section>
 
                 <hr class="my-8">
 
-                <!-- Technical Skills -->
+                <!-- Skills -->
                 <section class="mb-8">
-                    <h2 class="text-2xl font-bold text-black mb-4">Technical Skills</h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <h4 class="font-bold text-black mb-2">Backend Development</h4>
-                            <p class="text-gray-700">Laravel, PHP, MySQL, RESTful APIs, Database Optimization</p>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-black mb-2">Frontend & Full-Stack</h4>
-                            <p class="text-gray-700">HTML, CSS, JavaScript, Responsive Web Design, Bootstrap</p>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-black mb-2">Software Engineering</h4>
-                            <p class="text-gray-700">Java, C++, OOP Principles, Data Structures, Design Patterns</p>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-black mb-2">IoT & Hardware</h4>
-                            <p class="text-gray-700">ESP32, Arduino, Sensor Integration, Embedded Systems, Python</p>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-black mb-2">Methodologies</h4>
-                            <p class="text-gray-700">Git Version Control, Agile/Scrum, System Architecture, API Development</p>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-black mb-2">Additional</h4>
-                            <p class="text-gray-700">Cloud Deployment, Real-time Analytics, ML Basics, Problem Solving</p>
-                        </div>
-                    </div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-black mb-4">Skills</h2>
+                    <dl class="grid grid-cols-1 sm:grid-cols-[max-content_1fr] gap-x-6 gap-y-2 text-sm sm:text-base">
+                        <dt class="font-semibold text-black">Languages</dt>
+                        <dd class="text-gray-700 mb-2 sm:mb-0">PHP, JavaScript, Java, C++, SQL, HTML, CSS</dd>
+                        <dt class="font-semibold text-black">Frameworks &amp; Tools</dt>
+                        <dd class="text-gray-700 mb-2 sm:mb-0">Laravel, Filament v3, Livewire, Alpine.js, Tailwind CSS, Java Servlets, JSP, JDBC, Git</dd>
+                        <dt class="font-semibold text-black">Database &amp; Infrastructure</dt>
+                        <dd class="text-gray-700 mb-2 sm:mb-0">MySQL, Oracle Database, Linux VPS administration, Nginx, SSL/TLS (Certbot), AWS EC2</dd>
+                        <dt class="font-semibold text-black">IoT</dt>
+                        <dd class="text-gray-700 mb-2 sm:mb-0">ESP32 firmware, MQTT, Flask</dd>
+                        <dt class="font-semibold text-black">Practices</dt>
+                        <dd class="text-gray-700 mb-2 sm:mb-0">MVC, DAO pattern, OOP, UAT, Data Structures</dd>
+                        <dt class="font-semibold text-black">Spoken languages</dt>
+                        <dd class="text-gray-700">Bahasa Malaysia (native), English (professional), Arabic (intermediate)</dd>
+                    </dl>
                 </section>
 
                 <hr class="my-8">
 
-                <!-- Languages -->
+                <!-- Certifications -->
                 <section>
-                    <h2 class="text-2xl font-bold text-black mb-4">Languages</h2>
-                    <ul class="space-y-2 text-gray-700">
-                        <li><span class="font-semibold">Bahasa Malaysia:</span> Native / Fluent</li>
-                        <li><span class="font-semibold">English:</span> Professional / Fluent</li>
-                        <li><span class="font-semibold">Arabic:</span> Intermediate</li>
+                    <h2 class="text-xl sm:text-2xl font-bold text-black mb-4">Certifications</h2>
+                    <ul class="bullets text-gray-700 text-sm sm:text-base">
+                        <li>Career Essentials in Software Development, Microsoft &amp; LinkedIn (Oct 2026)</li>
+                        <li>Career Essentials in Generative AI, Microsoft &amp; LinkedIn (Oct 2026)</li>
                     </ul>
                 </section>
-            </div>
-
-            <!-- Print Footer -->
-            <div class="mt-12 text-center text-gray-600 text-sm print:hidden">
-                <p>Last Updated: December 2024</p>
-            </div>
+            </article>
         </div>
     </main>
 
-    <style media="print">
-        header, #menu-btn, .print\:hidden {
-            display: none !important;
-        }
-        
-        body {
-            background: white;
-        }
-        
-        main {
-            padding-top: 0 !important;
-        }
-    </style>
-
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800 print:hidden">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+    <footer class="bg-gray-950 text-white py-12 lg:py-16 border-t border-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-5 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 mb-12">
                 <div>
-                    <h3 class="font-bold text-lg mb-4">Muhammad Ikhwan Ariff</h3>
-                    <p class="text-gray-400">Full-Stack Developer & IT Specialist</p>
+                    <h3 class="font-bold text-xl mb-2">Muhammad Ikhwan Ariff</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Full-Stack Web Developer · Kajang, Selangor, Malaysia</p>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Navigation</h4>
-                    <div class="space-y-2 text-gray-400">
+                    <h4 class="font-bold text-gray-100 mb-4 uppercase tracking-wider text-sm">Navigation</h4>
+                    <div class="space-y-3 text-gray-400 text-sm font-medium">
                         <p><a href="index.html" class="hover:text-white transition">Home</a></p>
                         <p><a href="experience.html" class="hover:text-white transition">Experience</a></p>
                         <p><a href="projects.html" class="hover:text-white transition">Projects</a></p>
                         <p><a href="skills.html" class="hover:text-white transition">Skills</a></p>
+                        <p><a href="resume.html" class="hover:text-white transition">Resume</a></p>
                     </div>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Connect</h4>
-                    <div class="space-y-2 text-gray-400">
-                        <p><a href="mailto:ikhwanariff255@gmail.com" class="hover:text-white transition">Email</a></p>
-                        <p><a href="tel:+60182575321" class="hover:text-white transition">+60 182 575 321</a></p>
-                        <p><a href="#" class="hover:text-white transition">LinkedIn</a></p>
-                        <p><a href="#" class="hover:text-white transition">GitHub</a></p>
+                    <h4 class="font-bold text-gray-100 mb-4 uppercase tracking-wider text-sm">Connect</h4>
+                    <div class="space-y-3 text-gray-400 text-sm font-medium">
+                        <p><a href="mailto:ikhwanariff255@gmail.com" class="hover:text-white transition flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">mail</span> ikhwanariff255@gmail.com</a></p>
+                        <p><a href="tel:+60182575321" class="hover:text-white transition flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">call</span> +60 18-257 5321</a></p>
+                        <p><a href="https://www.linkedin.com/in/ikhwan-ariff-31864a323" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">link</span> LinkedIn</a></p>
+                        <p><a href="https://github.com/ikhwanariff255" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">code</span> GitHub</a></p>
                     </div>
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8">
-                <p class="text-center text-gray-400">© 2024 Muhammad Ikhwan Ariff. Crafted with precision & intent.</p>
+                <p class="text-center md:text-left text-gray-500 text-sm">© <span data-year>2026</span> Muhammad Ikhwan Ariff</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
+    <script src="assets/site.js"></script>
 </body>
 </html>
